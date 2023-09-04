@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  db:
+    container_name: PGLOCAL
+    image: postgres:11.2
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: PGLOCAL
+    volumes:
+      - reactApp:/var/lib/postgresql/data
+
+  api:
+    container_name: flask_api
+    working_dir: /backend
+    build:
+      context: ./docker/backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/backend
+    tty: true
+    depends_on:
+      - db
+
+  app:
+    container_name: web_app
+    build:
+      context: ./docker/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/frontend
+    tty: true
+    depends_on:
+      - api
+
+volumes:
+  reactApp:
