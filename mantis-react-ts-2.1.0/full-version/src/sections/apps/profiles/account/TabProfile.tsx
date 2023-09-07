@@ -15,7 +15,7 @@ import {
 } from '@mui/material';
 
 // third-party
-import { PatternFormat } from 'react-number-format';
+// import { PatternFormat } from 'react-number-format';
 
 // project import
 import MainCard from 'components/MainCard';
@@ -41,13 +41,13 @@ const TabProfile = () => {
               <Grid container spacing={3}>
                 <Grid item xs={12}>
                   <Stack direction="row" justifyContent="flex-end">
-                    <Chip label="Pro" size="small" color="primary" />
+                    <Chip label="正社員" size="small" color="primary" />
                   </Stack>
                   <Stack spacing={2.5} alignItems="center">
                     <Avatar alt="Avatar 1" size="xl" src={avatarImage(`./default.png`)} />
                     <Stack spacing={0.5} alignItems="center">
-                      <Typography variant="h5">Anshan H.</Typography>
-                      <Typography color="secondary">Project Manager</Typography>
+                      <Typography variant="h5">村井俊介</Typography>
+                      <Typography color="secondary">課長</Typography>
                     </Stack>
                   </Stack>
                 </Grid>
@@ -90,7 +90,7 @@ const TabProfile = () => {
                         <PhoneOutlined />
                       </ListItemIcon>
                       <ListItemSecondaryAction>
-                        <Typography align="right">(+1-876) 8654 239 581</Typography>
+                        <Typography align="right">090-8545-6584</Typography>
                       </ListItemSecondaryAction>
                     </ListItem>
                     <ListItem>
@@ -98,7 +98,7 @@ const TabProfile = () => {
                         <AimOutlined />
                       </ListItemIcon>
                       <ListItemSecondaryAction>
-                        <Typography align="right">New York</Typography>
+                        <Typography align="right">北海道札幌市豊平区豊平7-8-5</Typography>
                       </ListItemSecondaryAction>
                     </ListItem>
                     <ListItem>
@@ -120,19 +120,19 @@ const TabProfile = () => {
             <MainCard title="Skills">
               <Grid container spacing={1.25}>
                 <Grid item xs={6}>
-                  <Typography color="secondary">Junior</Typography>
+                  <Typography color="secondary">JAVA</Typography>
                 </Grid>
                 <Grid item xs={6}>
                   <LinearWithLabel value={30} />
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography color="secondary">UX Reseacher</Typography>
+                  <Typography color="secondary">Python</Typography>
                 </Grid>
                 <Grid item xs={6}>
                   <LinearWithLabel value={80} />
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography color="secondary">Wordpress</Typography>
+                  <Typography color="secondary">TypeScript</Typography>
                 </Grid>
                 <Grid item xs={6}>
                   <LinearWithLabel value={90} />
@@ -144,13 +144,13 @@ const TabProfile = () => {
                   <LinearWithLabel value={30} />
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography color="secondary">Graphic Design</Typography>
+                  <Typography color="secondary">CSS</Typography>
                 </Grid>
                 <Grid item xs={6}>
                   <LinearWithLabel value={95} />
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography color="secondary">Code Style</Typography>
+                  <Typography color="secondary">SQL</Typography>
                 </Grid>
                 <Grid item xs={6}>
                   <LinearWithLabel value={75} />
@@ -163,28 +163,27 @@ const TabProfile = () => {
       <Grid item xs={12} sm={7} md={8} xl={9}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <MainCard title="About me">
+            <MainCard title="自己紹介">
               <Typography color="secondary">
-                Hello, I’m Anshan Handgun Creative Graphic Designer & User Experience Designer based in Website, I create digital Products a
-                more Beautiful and usable place. Morbid accusant ipsum. Nam nec tellus at.
+              こんにちは、私は鞍山ハンドガンのクリエイティブ グラフィック デザイナー兼ウェブサイトを拠点とするユーザー エクスペリエンス デザイナーで、デジタル製品を作成しています。
               </Typography>
             </MainCard>
           </Grid>
           <Grid item xs={12}>
-            <MainCard title="Personal Details">
+            <MainCard title="個人情報">
               <List sx={{ py: 0 }}>
                 <ListItem divider={!matchDownMD}>
                   <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
                       <Stack spacing={0.5}>
-                        <Typography color="secondary">Full Name</Typography>
-                        <Typography>Anshan Handgun</Typography>
+                        <Typography color="secondary">氏名</Typography>
+                        <Typography>村井 俊介</Typography>
                       </Stack>
                     </Grid>
                     <Grid item xs={12} md={6}>
                       <Stack spacing={0.5}>
-                        <Typography color="secondary">Father Name</Typography>
-                        <Typography>Mr. Deepen Handgun</Typography>
+                        <Typography color="secondary">フリガナ</Typography>
+                        <Typography>ムライ シュンスケ</Typography>
                       </Stack>
                     </Grid>
                   </Grid>
@@ -193,9 +192,10 @@ const TabProfile = () => {
                   <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
                       <Stack spacing={0.5}>
-                        <Typography color="secondary">Phone</Typography>
+                        <Typography color="secondary">電話番号</Typography>
                         <Typography>
-                          (+1-876) <PatternFormat value={8654239581} displayType="text" type="text" format="#### ### ###" />
+                          090-9521-9339
+                          {/* <PatternFormat value={09095219336} displayType="text" type="text" format="### #### ####" /> */}
                         </Typography>
                       </Stack>
                     </Grid>
@@ -211,35 +211,35 @@ const TabProfile = () => {
                   <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
                       <Stack spacing={0.5}>
-                        <Typography color="secondary">Email</Typography>
+                        <Typography color="secondary">メールアドレス</Typography>
                         <Typography>anshan.dh81@gmail.com</Typography>
                       </Stack>
                     </Grid>
                     <Grid item xs={12} md={6}>
                       <Stack spacing={0.5}>
-                        <Typography color="secondary">Zip Code</Typography>
-                        <Typography>956 754</Typography>
+                        <Typography color="secondary">郵便番号</Typography>
+                        <Typography>062-0078</Typography>
                       </Stack>
                     </Grid>
                   </Grid>
                 </ListItem>
                 <ListItem>
                   <Stack spacing={0.5}>
-                    <Typography color="secondary">Address</Typography>
-                    <Typography>Street 110-B Kalians Bag, Dewan, M.P. New York</Typography>
+                    <Typography color="secondary">住所</Typography>
+                    <Typography>北海道札幌市豊平区豊平7-8-5</Typography>
                   </Stack>
                 </ListItem>
               </List>
             </MainCard>
           </Grid>
           <Grid item xs={12}>
-            <MainCard title="Education">
+            <MainCard title="学歴">
               <List sx={{ py: 0 }}>
                 <ListItem divider>
                   <Grid container spacing={matchDownMD ? 0.5 : 3}>
                     <Grid item xs={12} md={6}>
                       <Stack spacing={0.5}>
-                        <Typography color="secondary">Master Degree (Year)</Typography>
+                        <Typography color="secondary">大学</Typography>
                         <Typography>2014-2017</Typography>
                       </Stack>
                     </Grid>
@@ -255,13 +255,13 @@ const TabProfile = () => {
                   <Grid container spacing={matchDownMD ? 0.5 : 3}>
                     <Grid item xs={12} md={6}>
                       <Stack spacing={0.5}>
-                        <Typography color="secondary">Bachelor (Year)</Typography>
+                        <Typography color="secondary">専門学校</Typography>
                         <Typography>2011-2013</Typography>
                       </Stack>
                     </Grid>
                     <Grid item xs={12} md={6}>
                       <Stack spacing={0.5}>
-                        <Typography color="secondary">Institute</Typography>
+                        <Typography color="secondary">大原法律公務員専門学校</Typography>
                         <Typography>Imperial College London</Typography>
                       </Stack>
                     </Grid>
@@ -271,7 +271,7 @@ const TabProfile = () => {
                   <Grid container spacing={matchDownMD ? 0.5 : 3}>
                     <Grid item xs={12} md={6}>
                       <Stack spacing={0.5}>
-                        <Typography color="secondary">School (Year)</Typography>
+                        <Typography color="secondary">高等学校</Typography>
                         <Typography>2009-2011</Typography>
                       </Stack>
                     </Grid>
@@ -287,7 +287,7 @@ const TabProfile = () => {
             </MainCard>
           </Grid>
           <Grid item xs={12}>
-            <MainCard title="Emplyment">
+            <MainCard title="職歴">
               <List sx={{ py: 0 }}>
                 <ListItem divider>
                   <Grid container spacing={matchDownMD ? 0.5 : 3}>

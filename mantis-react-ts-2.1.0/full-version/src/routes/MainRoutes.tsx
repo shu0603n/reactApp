@@ -6,6 +6,9 @@ import CommonLayout from 'layout/CommonLayout';
 import Loadable from 'components/Loadable';
 import AuthGuard from 'utils/route-guard/AuthGuard';
 
+// render - top
+const TopPage = Loadable(lazy(() => import('pages/topPage/topPage')));
+
 // render - dashboard
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/default')));
 const DashboardAnalytics = Loadable(lazy(() => import('pages/dashboard/analytics')));
@@ -129,8 +132,20 @@ const MainRoutes = {
       ),
       children: [
         {
+          path: 'top',
+          children: [
+            
+            {
+              path: 'top',
+              element: <TopPage />
+            },
+
+          ]
+        },
+        {
           path: 'dashboard',
           children: [
+            
             {
               path: 'default',
               element: <DashboardDefault />

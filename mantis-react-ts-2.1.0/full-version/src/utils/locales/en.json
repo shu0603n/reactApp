@@ -1,6 +1,7 @@
 {
+  "topPage": "トップ",
   "accordion": "Accordion",
-  "account-profile": "Account Profile",
+  "account-profile": "アカウント情報",
   "action-bar": "Action Bar",
   "add-new-product": "Add New Product",
   "alert": "Alert",
@@ -98,7 +99,7 @@
   "products": "Products",
   "product-details": "Product Details",
   "product-list": "Product List",
-  "profile": "Profile",
+  "profile": "プロフィール",
   "progress": "Progress",
   "radio": "Radio",
   "rating": "Rating",
@@ -132,7 +133,7 @@
   "under-construction": "Under Construction",
   "user-card": "User Card",
   "user-list": "User List",
-  "user-profile": "User Profile",
+  "user-profile": "ユーザー情報",
   "utils": "Utils",
   "widgets": "Widgets",
   "More Items": "More Items"
