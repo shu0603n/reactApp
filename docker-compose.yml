@@ -19,6 +19,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
+      # ローカル環境でアクセスしているPOST/docker環境でアクセスしたいPOST
     volumes:
       - ./backend:/backend
     tty: true
@@ -32,6 +33,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
+        # ローカル環境でアクセスしているPOST/docker環境でアクセスしたいPOST
     volumes:
       - ./frontend:/frontend
     tty: true
